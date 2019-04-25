@@ -2,6 +2,9 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 
+######################################
+# coordonnées spatiales et temporelles
+######################################
 
 T = [0.0, 0.04, 0.08, 0.12, 0.16, 0.2, 0.24, 0.28, 0.32, 0.36, 0.4, 0.44, 0.48, 0.52, 0.56, 0.6, 0.64, 0.68, 0.72, 0.76, 0.8, 0.84, 0.88, 0.92]
 
@@ -15,9 +18,6 @@ Y = [-0.046666407409568, 0.069999611114352, 0.166665740748457, 0.253331925937654
 # question 1
 ######################
 
-# À COMPLÉTER :
-# représenter la trajectoire
-
 plt.plot(X,Y,'b--', label = 'trajectoire')
 
 
@@ -27,15 +27,11 @@ plt.plot(X,Y,'b--', label = 'trajectoire')
 # question 2
 ######################
 
-# À COMPLÉTER :
-# trouver la liste des coefficients polynomiaux
 liste = np.polyfit(X,Y,2)
 a = liste[0]
 b = liste[1]
 c = liste[2]
 
-# À COMPLÉTER :
-# faites-les afficher
 print("a = ", a)
 print("b = ", b)
 print("c = ", c)
@@ -47,17 +43,10 @@ print("c = ", c)
 # question 3
 ######################
 
-# À COMPLÉTER :
-# on transforme la liste X en tableau
 X = np.array(X)
 
-# À COMPLÉTER :
-# on construit un tableau Y_modele image du tableau X
-# par le polynôme trouvé au dessus
 Y_modele = a*X**2+b*X+c
 
-# À COMPLÉTER :
-# on construit la trace de ce polynôme sur le graphe
 plt.plot(X, Y_modele, 'r-', label = "modèle")
 
 
@@ -66,8 +55,6 @@ plt.plot(X, Y_modele, 'r-', label = "modèle")
 # question 4
 ######################
 
-# À COMPLÉTER :
-# noms des axes, titre du graphique
 plt.xlabel("abscisse")
 plt.ylabel("ordonnée")
 plt.title("Trajectoire et modèle associé")
