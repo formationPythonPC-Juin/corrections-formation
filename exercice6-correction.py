@@ -5,14 +5,28 @@
 ######################################
 # question 3 : extraction des 2 listes
 ######################################
+
+########################
+# méthode 1 : avec Numpy
+########################
+import numpy as np
+
+tableau = np.loadtxt("donnees", delimiter = ",", skiprows = 1)
+T = tableau[:,0]
+R = tableau[:,1]
+
+"""
+# OU : 
+########################
+# méthode 2 : avec Pandas
+########################
 import pandas as pa
 
 table = pa.read_csv("donnees")
 
 T = table["température"]
 R = table["Réquivalente"]
-
-
+"""
 ####################################################
 # question 4 : représentation graphique des 2 listes
 ####################################################

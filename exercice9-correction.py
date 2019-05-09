@@ -51,7 +51,7 @@ while t < 3*T : #
     I = I0*np.cos(omega*t-k*x+phi) # formule de notre onde : t intervient ici
     courbe.set_data(x,I) # on met à jour les valeurs des listes x et surtout I
     print(t) # 
-    plt.pause(dt) #
+    plt.pause(dt) # temps de pause entre chaque affichage
     t = t + dt # on incrémente t ... et on recommence
 
 plt.show() #
